@@ -52,22 +52,3 @@ create table occasions_recipes (
     occasion_id integer not null references occasions(occasion_id),
     recipe_id integer not null references recipes(recipe_id)
 );
-
--- 
--- 
-
-insert into users (first_name, last_name, email, passwd)
-values ('firstName','lastName','email@server.com','asdf()');
-
-insert into ingredients (name) values
-('ham'),
-('swiss cheese'),
-('rye bread');
-
-insert into recipes (user_id, instructions, isPublic) values
-(1,'Place ham and swiss on the rye bread.', true);
-
-insert into recipes_ingredients (recipe_id,ingredient_id,amount) values
-(3,31,'three slices'),
-(3,32,'one slice'),
-(3,33,'two slices');
