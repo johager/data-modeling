@@ -1,0 +1,86 @@
+=== Summary ===
+
+We want to create a recipe creating/sharing and grocery list app. You’ll be planning out what tables we’ll need, what information they’ll store, and how the data will relate to each other.
+
+=== Features ===
+
+users can sign into the app with their email and password
+
+users can create recipes with ingredients and instructions
+
+recipes can be marked as public or private
+
+users can view other people’s recipes
+
+ingredients from recipes can be added to user’s grocery lists
+
+users can create their own occasions and assign recipes to occasions
+
+===
+=== Part 1: Conceptual Planning ===
+===
+
+=== Step 1: Brainstorming ===
+
+In your doc, start a list and title it “Brainstorming”.
+
+Take 10 minutes individually and brainstorm all the different things you might need to keep track of for this app.
+
+Don’t worry if you repeat something or if it seems dumb as soon as you think it – write it down anyway.
+
+Walk through some different user flows to help you think of all the data they might come across. You could also quickly sketch out some different views of the app and figure out what data would be needed for each view.
+
+After 10 minutes, reconvene with your partner and share your ideas.
+
+=== === ===
+
+== basic tables ==
+
+users
+- user_id
+- first_name
+- last_name
+- email
+- passwd
+- created
+
+recipes
+- recipe_id
+- user_id
+- instructions
+- created
+- isPublic
+
+ingredients
+- ingredient_id
+- name
+
+grocery_lists
+- grocery_list_id
+- user_id
+- created
+- status: toGet, purchased
+
+occasions
+- occasion_id
+- user_id
+- occasion
+
+== bridge tables ==
+
+recipes_ingredients
+- id
+- recipe_id
+- ingredient_id
+- amount
+
+grocery_lists_ingredients
+- id
+- grocery_list_id
+- ingredient_id
+- amount
+
+occasions_recipes
+- id
+- occasion_id
+- recipe_id

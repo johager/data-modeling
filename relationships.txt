@@ -1,0 +1,13 @@
+users to many recipes
+
+recipes to many ingredients
+
+ingredients to many recipes
+
+grocery_lists to many ingredients
+
+ingredients to many grocery_lists
+
+occasions to many recipes
+
+recipes to many occasions
